@@ -8,5 +8,4 @@ libraryDependencies += "org.apache.httpcomponents" % "httpclient" % "4.1.1"
 libraryDependencies += "org.apache.spark" % "spark-core_2.10" % "1.6.0"
 libraryDependencies += "org.apache.spark" % "spark-streaming_2.10" % "1.6.0"
 libraryDependencies += "org.apache.hadoop" % "hadoop-core" % "1.2.1"
-libraryDependencies += "org.apache.hbase" % "hbase" % "1.2.0"
-
+libraryDependencies += "org.apache.hbase" % "hbase" % "0.92.1"

@@ -2,8 +2,6 @@
   * Created by LoicMDIVAD on 18/03/2016.
   */
 
-package exercises
-
 import org.apache.hadoop.hbase.HBaseConfiguration
 import org.apache.hadoop.hbase.client.Put
 import org.apache.hadoop.hbase.io.ImmutableBytesWritable
