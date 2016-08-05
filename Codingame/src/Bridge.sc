@@ -10,6 +10,7 @@ object Player extends App {
   val gap = readInt // the length of the gap.
   val platform = readInt // the length of the landing platform.
 
+  var cmd = new String()
   // game loop
   while(true) {
     val speed = readInt // the motorbike's speed.
@@ -17,9 +18,13 @@ object Player extends App {
 
     // Write an action using println
     // To debug: Console.err.println("Debug messages...")
-
+    cmd = road - coordx match {
+      case x if(x >= speed) => "SPEED"
+      case x if(x > 0) => "JUMP"
+      case _ => "SLOW"
+    }
 
     // A single line containing one of 4 keywords: SPEED, SLOW, JUMP, WAIT.
-    println("SPEED")
+    println(s"$cmd")
   }
 }
