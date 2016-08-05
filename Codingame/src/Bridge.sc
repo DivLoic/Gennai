@@ -18,11 +18,10 @@ object Player extends App {
 
     // Write an action using println
     // To debug: Console.err.println("Debug messages...")
-    cmd = road - coordx match {
-      case x if(x >= speed) => "SPEED"
-      case x if(x > 0) => "JUMP"
-      case _ => "SLOW"
-    }
+
+    if(speed <= gap) cmd = "SPEED" else cmd = "WAIT"
+    if(coordx + speed >= road + gap) cmd = "JUMP"
+    if(road - coordx < 0 || speed > gap+1) cmd  = "SLOW"
 
     // A single line containing one of 4 keywords: SPEED, SLOW, JUMP, WAIT.
     println(s"$cmd")
