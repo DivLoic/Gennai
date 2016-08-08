@@ -19,6 +19,7 @@ object Player extends App {
     // Write an action using println
     // To debug: Console.err.println("Debug messages...")
 
+    // TODO: Find a better syntax
     if(speed <= gap) cmd = "SPEED" else cmd = "WAIT"
     if(coordx + speed >= road + gap) cmd = "JUMP"
     if(road - coordx < 0 || speed > gap+1) cmd  = "SLOW"
