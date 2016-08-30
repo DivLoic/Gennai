@@ -8,23 +8,23 @@ import Direction.sequence
   * Created by loicmdivad on 10/08/2016. <br/>
   * This abstract class define a contract for all  automatic tools
   *
-  * @param x : Int Vertical position
-  * @param y : Int Horizontal position
-  * @param direction : Direction.value cardinal position (N,S,E & W)
+  * @param x Vertical position
+  * @param y Horizontal position
+  * @param direction Direction.value cardinal position (N,S,E & W)
   */
 abstract class Automatic(x:Int, y:Int, direction:Direction.Value) extends Tool {
 
   /**
     * Call when the race of the tool
     * is over and return a final position
-    * @return : Any final message
+    * @return Any final message
     */
   def stop(): Any = ???
 
   /**
     * Use the tool and move it depending of the order argOrder
-    * @param argOrder : Char, code corresponding to an action
-    * @param log : Logger,
+    * @param argOrder the code corresponding to an action
+    * @param log Logger
     * @return a new Automatic Tool ready to move
     */
   def run(argOrder: Char, log: Logger): Automatic = ???
@@ -43,7 +43,7 @@ abstract class Automatic(x:Int, y:Int, direction:Direction.Value) extends Tool {
 
   /**
     * Return the direction on the left to the ith direction
-    * @param i : Int ith direction when started from N
+    * @param i the ith direction when started from N
     * @return
     */
   private def left(i: Int): Direction.Value =
@@ -51,7 +51,7 @@ abstract class Automatic(x:Int, y:Int, direction:Direction.Value) extends Tool {
 
   /**
     * Return the direction on the right to the ith direction
-    * @param i : Int ith direction when started from N
+    * @param i the ith direction when started from N
     * @return
     */
   private def right(i: Int): Direction.Value =
@@ -59,7 +59,7 @@ abstract class Automatic(x:Int, y:Int, direction:Direction.Value) extends Tool {
 
   /**
     * Compute the next position with a step forward
-    * @return : (Int, Int) (x, y)
+    * @return (x: Int, y: Int)
     */
   private def step: (Int, Int) = this.direction match {
       case Direction.N => (x, y+1)

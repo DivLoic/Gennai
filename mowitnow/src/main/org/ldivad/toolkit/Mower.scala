@@ -7,9 +7,9 @@ import com.typesafe.scalalogging.Logger
   * This stand for the basic Mower, with no functional rules. <br/>
   * You can pass any order, it will even jump out of the garden.
   *
-  * @param x : Int Vertical position
-  * @param y : Int Horizontal position
-  * @param direction : Direction.Value cardinal position (N,S,E & W)
+  * @param x Vertical position
+  * @param y Horizontal position
+  * @param direction Direction.Value cardinal position (N,S,E & W)
   */
 class Mower(x: Int, y: Int, direction: Direction.Value) extends Automatic(x, y, direction) {
 
@@ -17,15 +17,15 @@ class Mower(x: Int, y: Int, direction: Direction.Value) extends Automatic(x, y, 
 
   /**
     * The main usage of this tool: mowing
-    * @param log : Logger
+    * @param log Logger
     */
   def mow(log: Logger): Unit = log info s"Now mowing the garden at ($x,$y)."
 
   /**
     * Call mow on the current cell then <br/>
     * Return a new version of it self at the next cell
-    * @param argOrder : Char, code corresponding to an action
-    * @param log : Logger
+    * @param argOrder the code corresponding to an action
+    * @param log Logger
     * @return a new Automatic Tool ready to move (here a Mower)
     */
   override def run(argOrder: Char, log: Logger) = {

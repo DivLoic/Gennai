@@ -8,11 +8,11 @@ import com.typesafe.scalalogging.Logger
   * This class is where we store all the functional rules
   * related to the Square Garden and the orthonormal set.<br/>
   *
-  * @param x : Int Vertical position
-  * @param y : Int Horizontal position
-  * @param d : Direction.value Cardinal direction (N,S,E & W)
-  * @param X : Int Width of the garden
-  * @param Y : Int Height of the garden
+  * @param x Vertical position
+  * @param y Horizontal position
+  * @param d Direction.value of the Cardinal direction (N,S,E & W)
+  * @param X Width of the garden
+  * @param Y Height of the garden
   */
 class SquareMower(x:Int, y:Int, d:Direction.Value, X:Int, Y:Int) extends Mower(x, y, d){
 
@@ -30,8 +30,8 @@ class SquareMower(x:Int, y:Int, d:Direction.Value, X:Int, Y:Int) extends Mower(x
 
   /**
     * Do the same as super, but then apply a stack of validation rules.
-    * @param argOrder : Char, code corresponding to an action
-    * @param log : Logger
+    * @param argOrder code corresponding to an action
+    * @param log Logger
     * @return a new Automatic Tool ready to move (here a SquareMower)
     */
   override def run(argOrder: Char, log: Logger): SquareMower =  {
@@ -55,8 +55,8 @@ class SquareMower(x:Int, y:Int, d:Direction.Value, X:Int, Y:Int) extends Mower(x
   /**
     * Bring together all requirement with a <strong>&&</strong> operator. <br/>
     * So to pass all requirements should be filled and return true.
-    * @param m : Mower
-    * @return : Boolean weather the mower is congruent to a SquareMower
+    * @param m a mower to pass under
+    * @return true if the mower is congruent to a SquareMower
     */
   def allFunctionalRequirements(m: Mower): Boolean = {
     upperBound(m) &&
