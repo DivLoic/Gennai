@@ -5,7 +5,7 @@ version := "1.0"
 
 scalaVersion := "2.11.8"
 
-//mainClass in (Compile, run) := Some("org.ldivad.Main")
+mainClass in (Compile, run) := Some("org.ldivad.Main")
 
 libraryDependencies ++= Seq(
 
@@ -22,6 +22,6 @@ libraryDependencies ++= Seq(
 
 )
 
-//parallelExecution in Test := false
+parallelExecution in Test := false
 
-// logLevel in run := Level.Error
+logLevel in run := Level.Error
