@@ -10,6 +10,18 @@ lazy val commonSettings = Seq(
   scalaVersion := "2.11.8"
 )
 
+lazy val algoSettings = Seq(
+  libraryDependencies ++= Seq(
+    "com.typesafe" % "config" % "1.2.1",
+
+    "org.scalactic" % "scalactic_2.11" % "3.0.0",
+    "org.scalatest" % "scalatest_2.11" % "3.0.0",
+
+    "ch.qos.logback" %  "logback-classic" % "1.1.7",
+    "com.typesafe.scala-logging" % "scala-logging_2.11" % "3.4.0"
+  )
+)
+
 lazy val codingame = project.
   settings(commonSettings: _*)
 
@@ -27,20 +39,17 @@ lazy val mapr = project.
 
 lazy val mowitnow = project.
   settings(commonSettings: _*).
+  settings(algoSettings: _*).
   settings(
-
-    mainClass in (Compile, run) := Some("org.ldivad.Main"),
-    parallelExecution in Test := false,
     logLevel in run := Level.Error,
-
-    libraryDependencies ++= Seq(
-      "com.typesafe" % "config" % "1.2.1",
-
-      "org.scalactic" % "scalactic_2.11" % "3.0.0",
-      "org.scalatest" % "scalatest_2.11" % "3.0.0",
-
-      "ch.qos.logback" %  "logback-classic" % "1.1.7",
-      "com.typesafe.scala-logging" % "scala-logging_2.11" % "3.4.0"
-    )
+    parallelExecution in Test := false,
+    mainClass in (Compile, run) := Some("org.ldivad.Main")
   )
 
+lazy val csauto = project.
+  settings(commonSettings: _*).
+  settings(algoSettings: _*).
+  settings(
+    parallelExecution in Test := false,
+    mainClass in (Compile, run) := Some("org.ldivad.search.Main")
+  )
