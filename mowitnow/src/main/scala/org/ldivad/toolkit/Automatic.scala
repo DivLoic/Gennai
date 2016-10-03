@@ -19,7 +19,7 @@ abstract class Automatic(x:Int, y:Int, direction:Direction.Value) extends Tool {
     * is over and return a final position
     * @return : Any final message
     */
-  def stop(): Any = ???
+  def stop(): Any
 
   /**
     * Use the tool and move it depending of the order argOrder
@@ -27,7 +27,7 @@ abstract class Automatic(x:Int, y:Int, direction:Direction.Value) extends Tool {
     * @param log : Logger,
     * @return a new Automatic Tool ready to move
     */
-  def run(argOrder: Char, log: Logger): Automatic = ???
+  def run(argOrder: Char, log: Logger): Automatic
 
   /**
     * Compute the next position of the tool

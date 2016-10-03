@@ -6,10 +6,10 @@ package org.ldivad.toolkit
   */
 trait Tool {
 
-  def toCsv: String = ???
+  def toCsv: String
 
-  def toTsv: String = ???
+  def toTsv: String
 
-  def getActivity: Activity.Value = ???
+  def getActivity: Activity.Value
 
 }
