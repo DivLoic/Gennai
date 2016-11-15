@@ -1,0 +1,46 @@
+env         = "dev"
+
+# spark configuration
+spark {
+  master    = "localhost"
+  port      = "7077"
+}
+
+# sql database configuration
+sql {
+  driver    = "com.mysql.jdbc.Driver"
+  host      = "localhost"
+  port      = "3306"
+  schema    = "mydb"
+  user      = "root"
+  password  = "root"
+}
+
+# cql database configuration
+cassandra {
+  host      = "localhost"
+  port      = "9042"
+  keyspace  = "mykeyspace"
+}
+
+# Natural language used
+lang {
+  sigle     = "fr"
+  stemmer   = "FrenchStemmer"
+  analyzer  = "FrenchAnalyzer"
+}
+
+logger {
+  test      = "false"
+  dev       = "false"
+  staging   = "false"
+  prod      = "false"
+}
+
+# configuration of the recommender itself
+recommender {
+  nbresult  = "10"
+  vectsize  = "1048576"
+  distance  = "cosine"
+  #distance possible choise:  cosine, euclidean, squared, chebyshev, manhattan, tanimoto
+}
