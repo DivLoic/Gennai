@@ -66,3 +66,5 @@ lazy val csauto = project.
     parallelExecution in Test := false,
     mainClass in (Compile, run) := Some("org.ldivad.search.Main")
   )
+
+
