@@ -19,10 +19,14 @@ basic command
 ==========
 
 command     | description 
-------------|------
-`run`       | find all source for compiling & the main class
+------------|-------------------------------
+`clean`     | Deletes all generated files
+`compile`   | Compiles the main sources.
+`run`       | (argument) find all source for compiling & the main class
 `...`       | ...
-`inspect`   | show keys definitions
+`test`      | Compiles and runs all tests.
+`reload`    | Reloads the build definition.
+`inspect`   | Show keys definitions.
 
 REPL
 ==========
@@ -35,10 +39,18 @@ The REPL *(Read Eval Print Loop)* let you type 3 kinds of instructions:
 Syntax
 ==========
 
-`:=` declare a setting from a SettingKey
-`+=`
-`%`
-`%%`
+- `:=` declare a setting from a SettingKey
+- `+=`
+- `%`
+- `%%`
 
 Plugins
 ==========
+
+Multi Project Settings
+
+Examples
+==========
+
+- [ ] ScalaSpec
+- [ ] ???
