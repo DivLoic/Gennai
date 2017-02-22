@@ -4,15 +4,14 @@
 This project is a place for me to put a few projects & code examples in Scala.
 
 #### Tools:
-- SBT
+- sbt
 - Scala 
-- ScalaTest
 - IntelliJ
  
 #### A Few projects:
 - [X] codingame
-- [X] Streamer
-- [ ] Rico
+- [X] rico project
+- [ ] scalacheck examples
 
 
 #### Multi-modules configuration
